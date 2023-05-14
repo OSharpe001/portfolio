@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const Card = ({ title, description, imageSrc }) => {
+export default function Card({ title, description, imageSrc }) {
 
   return (
-    <Box bg="white" color="black" borderRadius="15px">
+    <Box bg="rgb(245, 245, 220)" color="black" borderRadius="15px">
       <VStack align="flex-start" spacing="14px">
         <Image src={imageSrc} borderRadius="15px"/>
         <Heading padding="0 0 0 20px" size="md" >{title}</Heading>
@@ -19,5 +19,3 @@ const Card = ({ title, description, imageSrc }) => {
     </Box>
   );
 };
-
-export default Card;

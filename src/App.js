@@ -7,7 +7,8 @@ import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 
-function App() {
+
+export default function App() {
   return (
     <ChakraProvider>
       <AlertProvider>
@@ -22,6 +23,4 @@ function App() {
       </AlertProvider>
     </ChakraProvider>
   );
-}
-
-export default App;
+};

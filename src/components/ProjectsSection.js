@@ -5,32 +5,32 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "Letter to Success",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware",
-    getImageSrc: () => require("../images/photo1.jpg"),
+      'My rendition of "Wheel of Fortune! A great way to wind-down a busy day of coding. 😁 ',
+    getImageSrc: () => require("../images/letter_to_success.png"),
   },
   {
-    title: "React Infinite Scroll",
+    title: "Little Lemon",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      'A "Full-Front End" rendition of a bistro website, complete with online ordering for delivery.',
+    getImageSrc: () => require("../images/little_lemon1.png"),
   },
   {
-    title: "Photo Gallery",
+    title: "The Sharpe Pages",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
+      'My first full-stack "CRUD-app"! Although it may need visual polishing, it is fully functional.',
+    getImageSrc: () => require("../images/sharpe_pages.png"),
   },
   {
-    title: "Event planner",
+    title: "More to Come",
     description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
+      "Just like any city, there's more projects on the horizon. . .",
+    getImageSrc: () => require("../images/city_top.jpeg"),
   },
 ];
 
-const ProjectsSection = () => {
+export default function ProjectsSection() {
   return (
     <FullScreenSection
       backgroundColor="#14532d"
@@ -59,5 +59,3 @@ const ProjectsSection = () => {
     </FullScreenSection>
   );
 };
-
-export default ProjectsSection;
