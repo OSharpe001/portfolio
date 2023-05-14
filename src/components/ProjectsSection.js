@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Little Lemon",
     description:
-      'A "Full-Front End" rendition of a bistro website, complete with online ordering for delivery.',
+      `A "front-end only" rendition of a bistro's website, complete with online ordering for delivery.`,
     getImageSrc: () => require("../images/little_lemon1.png"),
   },
   {
@@ -25,7 +25,7 @@ const projects = [
   {
     title: "More to Come",
     description:
-      "Just like any city, there's more projects on the horizon. . .",
+      "Just like a city's skyline, there's more projects on the horizon. . .",
     getImageSrc: () => require("../images/city_top.jpeg"),
   },
 ];
