@@ -6,29 +6,34 @@ import {
   faLinkedin,
   faMedium,
   faStackOverflow,
+  faTwitter
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
   {
     icon: faEnvelope,
-    url: "mailto: hello@example.com",
+    url: "mailto: osharpe001@gmail.com",
   },
   {
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/OSharpe001",
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/osharpe001",
   },
   {
-    icon: faMedium,
-    url: "https://medium.com",
+    icon: faTwitter,
+    url: "https://twitter.com/OSharpe001",
   },
+  // {
+  //   icon: faMedium,
+  //   url: "https://medium.com",
+  // },
   {
     icon: faStackOverflow,
-    url: "https://stackoverflow.com",
+    url: "https://stackoverflow.com/users/19149328/o-sharpe",
   },
 ];
 
@@ -63,7 +68,7 @@ const ScrollPosition = ({ render }) => {
   return "translateY("+headerPos+")"
 };
 
-const Header = () => {
+export default function Header() {
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -100,7 +105,7 @@ const Header = () => {
             {
               socials.map((socialLink) => {
                 return (
-                  <a href={socialLink.url} key={socialLink.url}>
+                  <a target="_blank" href={socialLink.url} key={socialLink.url}>
                     <FontAwesomeIcon icon={socialLink.icon} size="2x" />
                   </a>
                 )
@@ -124,5 +129,3 @@ const Header = () => {
     </Box>
   );
 };
-
-export default Header;
