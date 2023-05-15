@@ -1,7 +1,7 @@
 import * as React from "react";
 import { VStack } from "@chakra-ui/react";
 
-const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
+export default function FullScreenSection({ children, isDarkBackground, ...boxProps }) {
   return (
     <VStack
       backgroundColor={boxProps.backgroundColor}
@@ -13,5 +13,3 @@ const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
     </VStack>
   );
 };
-
-export default FullScreenSection;

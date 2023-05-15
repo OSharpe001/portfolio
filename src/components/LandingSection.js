@@ -1,27 +1,28 @@
 import React from "react";
 import { Avatar, Heading, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
+import my_profile from "../images/small_profile.png"
 
-const greeting = "Hello, I am Pete!";
+const greeting = "Hello, I am Omari!";
 const bio1 = "A frontend developer";
 const bio2 = "specialized in React";
 
-const LandingSection = () => (
-  <FullScreenSection
-    justifyContent="center"
-    alignItems="center"
-    isDarkBackground
-    backgroundColor="#2A4365"
-  >
+export default function LandingSection() {
+  return (
+    <FullScreenSection
+      justifyContent="center"
+      alignItems="center"
+      isDarkBackground
+      backgroundColor="#2A4365"
+    >
 
-    <Avatar name="Pete" size="2xl" alt="pete"src="https://i.pravatar.cc/150?img=7" />
-    <VStack spacing="24px">
-      <Heading as="h1" size="sm">{greeting}</Heading>
-      <br />
-      <Heading as="h2" size="2xl">{bio1}</Heading>
-      <Heading as="h2" size="2xl">{bio2}</Heading>
-    </VStack>
-  </FullScreenSection>
-);
-
-export default LandingSection;
+      <Avatar backgroundColor="rgb(245, 245, 220)" className="my-profile" name="O.Sharpe" size="2xl" alt="O.Sharpe"src={my_profile} />
+      <VStack spacing="24px">
+        <Heading color="rgb(245, 245, 220)" as="h1" size="sm">{greeting}</Heading>
+        <br />
+        <Heading color="rgb(245, 245, 220)" as="h2" size="2xl">{bio1}</Heading>
+        <Heading color="rgb(245, 245, 220)" as="h2" size="2xl">{bio2}</Heading>
+      </VStack>
+    </FullScreenSection>
+  );
+};

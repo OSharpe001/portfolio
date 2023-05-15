@@ -17,7 +17,7 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
-const LandingSection = () => {
+export default function LandingSection() {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
@@ -127,5 +127,3 @@ const LandingSection = () => {
     </FullScreenSection>
   );
 };
-
-export default LandingSection;
