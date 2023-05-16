@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Letter to Success",
     description:
-      'My rendition of "Wheel of Fortune! A great way to wind-down a busy day of coding. 😁 ',
+      'My rendition of "Wheel of Fortune! A great way to wind-down after a busy day of coding. 😁 ',
     getImageSrc: () => require("../images/letter_to_success.png"),
     site: "https://lettertosuccess.netlify.app"
   },
