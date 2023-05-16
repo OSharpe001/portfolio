@@ -12,12 +12,14 @@ export default function Card({ title, description, imageSrc, site }) {
         <Heading padding="0 0 0 20px" size="md" >{title}</Heading>
         <Text padding="0 20px">{description}</Text>
         <HStack padding="0 0 0 20px" spacing="14px">
-          {/* <Text>See more</Text> */}
-          <a
-          target="_blank"
-          href={site}>
-            Visit Site <FontAwesomeIcon icon={faArrowRight} size="1x"/>
-          </a>
+          {site?<a
+            target="_blank"
+            href={site}>
+              Visit Site <FontAwesomeIcon icon={faArrowRight} size="1x"/>
+            </a>
+            :
+            null
+          }
         </HStack>
       </VStack>
     </Box>

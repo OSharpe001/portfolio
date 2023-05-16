@@ -14,14 +14,14 @@ const projects = [
   {
     title: "Little Lemon",
     description:
-      `A "front-end only" rendition of a bistro's website, complete with online ordering for delivery.`,
+      "My rendition of a bistro's website, complete with online ordering for delivery.",
     getImageSrc: () => require("../images/little_lemon1.png"),
     site: "https://littlelemonbistro.vercel.app"
   },
   {
     title: "The Sharpe Pages",
     description:
-      'My first full-stack "CRUD-app"! Although it may need visual polishing, it is fully functional.',
+      'My first full-stack "CRUD-app" (2021)! Although it may need visual polishing, it is fully functional.',
     getImageSrc: () => require("../images/sharpe_pages.png"),
     site: "https://osharpe.pythonanywhere.com"
   },
