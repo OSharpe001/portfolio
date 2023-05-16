@@ -9,21 +9,21 @@ const projects = [
     description:
       'My rendition of "Wheel of Fortune! A great way to wind-down a busy day of coding. 😁 ',
     getImageSrc: () => require("../images/letter_to_success.png"),
-    // site: 
+    site: "https://lettertosuccess.netlify.app"
   },
   {
     title: "Little Lemon",
     description:
       `A "front-end only" rendition of a bistro's website, complete with online ordering for delivery.`,
     getImageSrc: () => require("../images/little_lemon1.png"),
-    // site: 
+    site: "https://littlelemonbistro.vercel.app"
   },
   {
     title: "The Sharpe Pages",
     description:
       'My first full-stack "CRUD-app"! Although it may need visual polishing, it is fully functional.',
     getImageSrc: () => require("../images/sharpe_pages.png"),
-    // site: 
+    site: "https://osharpe.pythonanywhere.com"
   },
   {
     title: "More to Come",
@@ -57,6 +57,7 @@ export default function ProjectsSection() {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            site={project.site}
           />
         ))}
       </Box>

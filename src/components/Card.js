@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-export default function Card({ title, description, imageSrc, /*site*/ }) {
+export default function Card({ title, description, imageSrc, site }) {
 
   return (
     <Box bg="rgb(245, 245, 220)" color="black" borderRadius="15px">
@@ -12,8 +12,12 @@ export default function Card({ title, description, imageSrc, /*site*/ }) {
         <Heading padding="0 0 0 20px" size="md" >{title}</Heading>
         <Text padding="0 20px">{description}</Text>
         <HStack padding="0 0 0 20px" spacing="14px">
-          <Text>See more</Text>
-          <FontAwesomeIcon icon={faArrowRight} size="1x"/>
+          {/* <Text>See more</Text> */}
+          <a
+          target="_blank"
+          href={site}>
+            Visit Site <FontAwesomeIcon icon={faArrowRight} size="1x"/>
+          </a>
         </HStack>
       </VStack>
     </Box>
