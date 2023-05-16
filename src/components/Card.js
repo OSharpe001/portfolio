@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-export default function Card({ title, description, imageSrc }) {
+export default function Card({ title, description, imageSrc, /*site*/ }) {
 
   return (
     <Box bg="rgb(245, 245, 220)" color="black" borderRadius="15px">

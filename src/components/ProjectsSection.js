@@ -9,24 +9,28 @@ const projects = [
     description:
       'My rendition of "Wheel of Fortune! A great way to wind-down a busy day of coding. 😁 ',
     getImageSrc: () => require("../images/letter_to_success.png"),
+    // site: 
   },
   {
     title: "Little Lemon",
     description:
       `A "front-end only" rendition of a bistro's website, complete with online ordering for delivery.`,
     getImageSrc: () => require("../images/little_lemon1.png"),
+    // site: 
   },
   {
     title: "The Sharpe Pages",
     description:
       'My first full-stack "CRUD-app"! Although it may need visual polishing, it is fully functional.',
     getImageSrc: () => require("../images/sharpe_pages.png"),
+    // site: 
   },
   {
     title: "More to Come",
     description:
       "Just like a city's skyline, there's more projects on the horizon. . .",
     getImageSrc: () => require("../images/city_top.jpeg"),
+    // site: 
   },
 ];
 
