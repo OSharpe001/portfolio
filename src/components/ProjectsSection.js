@@ -30,7 +30,7 @@ const projects = [
     description:
       "Just like a city's skyline, there's more projects on the horizon. . .",
     getImageSrc: () => require("../images/city_top.jpeg"),
-    // site: 
+    site: null
   },
 ];
 
