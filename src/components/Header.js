@@ -82,6 +82,7 @@ export default function Header() {
 
   return (
     <Box
+      className="header"
       position="fixed"
       top={0}
       left={0}
