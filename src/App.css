@@ -3,5 +3,11 @@
 }
 
 .my-profile {
+    margin: 0 0 10px;
     z-index: 3;
 }
+
+.form-button a {
+    width: stretch;
+}
+

@@ -16,14 +16,20 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
+import { sendEmail } from "./EmailMe";
 
 export default function LandingSection() {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
+  const clearForm=()=>{
+    setTimeout(formik.resetForm, 3000);
+    setTimeout(formik.setTouched, 3000, "false");
+  };
+
   const formik = useFormik({
     initialValues: {
-      firstName: '',
+      name: '',
       email: '',
       type:'',
       comment: '',
@@ -39,12 +45,14 @@ export default function LandingSection() {
       }
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required("Required"),
+      name: Yup.string().required("Required"),
       email: Yup.string().required("Required"),
       type: Yup.string().required("Required"),
       comment: Yup.string().required("Required"),
     }),
   });
+
+  const disabled= !!formik.errors.name || !!formik.errors.comment || !!formik.errors.type || !!formik.errors.email
 
   return (
     <FullScreenSection
@@ -61,17 +69,17 @@ export default function LandingSection() {
           <form onSubmit= {formik.handleSubmit}>
             <VStack spacing={4}>
 
-              <FormControl isInvalid={(formik.touched.firstName && formik.values.firstName==="")}>
-                <FormLabel htmlFor="firstName">Name</FormLabel>
+              <FormControl isInvalid={(formik.touched.name && formik.values.name==="")}>
+                <FormLabel htmlFor="name">Name</FormLabel>
                 <Input
-                  id="firstName"
-                  name="firstName"
+                  id="name"
+                  name="name"
                   type="text"
-                  value={formik.values.firstName}
+                  value={formik.values.name}
                   onChange={formik.handleChange}
-                  onFocus={()=> formik.touched.firstName=true}
+                  onFocus={()=> formik.touched.name=true}
                 />
-                <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
+                <FormErrorMessage>{formik.errors.name}</FormErrorMessage>
               </FormControl>
 
               <FormControl isInvalid={formik.touched.email && formik.values.email===""}>
@@ -95,11 +103,9 @@ export default function LandingSection() {
                     onFocus={()=> formik.touched.type=true}
                     >
                   <option value="">Service Context?</option>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
-                  <option value="other">Other</option>
+                  <option value="Career Opportunity">Career Opportunity</option>
+                  <option value="Freelance Project Proposal">Freelance Project Proposal</option>
+                  <option value="Open Source Consultancy Session">Open Source Consultancy Session</option>
                 </Select>
                 <FormErrorMessage>{formik.errors.type}</FormErrorMessage>
               </FormControl>
@@ -117,8 +123,13 @@ export default function LandingSection() {
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
 
-              <Button type="submit" colorScheme="purple" width="full" >
-                {isLoading ? "Wait Please. . .": "Submit"}
+              <Button className="form-button" colorScheme="purple" width="full" onClick={clearForm} disabled={disabled}>
+                {sendEmail({
+                  name:formik.values.name,
+                  email:formik.values.email,
+                  inquery:formik.values.type,
+                  message:formik.values.comment,
+                })}
               </Button>
             </VStack>
           </form>
