@@ -61,8 +61,8 @@ export default function LandingSection() {
       py={16}
       spacing={8}
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">
-        <Heading as="h1" id="contactme-section">
+      <VStack id="contactme-section" w="1024px" p={32} alignItems="flex-start">
+        <Heading as="h1" id="contactme-header">
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">

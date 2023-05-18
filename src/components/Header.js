@@ -94,7 +94,7 @@ export default function Header() {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
     >
-      <Box color="white" maxWidth="1280px" margin="0 auto">
+      <Box className="icon-box" color="white" maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
           py={4}
@@ -102,12 +102,12 @@ export default function Header() {
           alignItems="center"
         >
           <nav>
-          <HStack spacing={7}>
+          <HStack className="nav-icons" spacing={7}>
             {
               socials.map((socialLink) => {
                 return (
                   <a target="_blank" href={socialLink.url} key={socialLink.url}>
-                    <FontAwesomeIcon icon={socialLink.icon} size="2x" />
+                    <FontAwesomeIcon className="icons" icon={socialLink.icon} size="2x" />
                   </a>
                 )
               })
@@ -119,8 +119,8 @@ export default function Header() {
             <HStack spacing={8}>
               {
               <>
-              <a onClick={handleClick("contactme")} href="/#contact-me">Contact Me</a>
-              <a onClick={handleClick("projects")} href="/#projects">Projects</a>
+              <a className="shift-page" onClick={handleClick("contactme")} href="/#contact-me">Contact Me</a>
+              <a className="shift-page" onClick={handleClick("projects")} href="/#projects">Projects</a>
               </>
               }
             </HStack>
