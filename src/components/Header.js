@@ -4,7 +4,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  // faMedium,
   faStackOverflow,
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
@@ -27,10 +26,6 @@ const socials = [
     icon: faTwitter,
     url: "https://twitter.com/OSharpe001",
   },
-  // {
-  //   icon: faMedium,
-  //   url: "https://medium.com",
-  // },
   {
     icon: faStackOverflow,
     url: "https://stackoverflow.com/users/19149328/o-sharpe",
@@ -106,7 +101,7 @@ export default function Header() {
             {
               socials.map((socialLink) => {
                 return (
-                  <a target="_blank" href={socialLink.url} key={socialLink.url}>
+                  <a aria-label="On Click" target="_blank" href={socialLink.url} key={socialLink.url}>
                     <FontAwesomeIcon className="icons" icon={socialLink.icon} size="2x" />
                   </a>
                 )
@@ -119,8 +114,8 @@ export default function Header() {
             <HStack spacing={8}>
               {
               <>
-              <a className="shift-page" onClick={handleClick("contactme")} href="/#contact-me">Contact Me</a>
-              <a className="shift-page" onClick={handleClick("projects")} href="/#projects">Projects</a>
+              <a aria-label="On Click" className="shift-page" onClick={handleClick("contactme")} href="/#contact-me">Contact Me</a>
+              <a aria-label="On Click" className="shift-page" onClick={handleClick("projects")} href="/#projects">Projects</a>
               </>
               }
             </HStack>
