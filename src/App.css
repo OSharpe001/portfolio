@@ -10,6 +10,12 @@
     width: stretch;
 }
 
+/* #project-link {
+    --NEED TO MAKE ALL SITE LINKS UNIFORM REGARDLESS OF THE TEXT IN THE DESCRIPTION ABOVE IT--
+    bottom: 2px;
+    border: 2px solid red;
+} */
+
 @media (max-width: 600px) {
     .header {
         height: 10vh;

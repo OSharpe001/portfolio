@@ -6,14 +6,15 @@ import React from "react";
 export default function Card({ title, description, imageSrc, site }) {
 
   return (
-    <Box bg="rgb(245, 245, 220)" color="black" borderRadius="15px">
+    <Box id="project-box" bg="rgb(245, 245, 220)" color="black" borderRadius="15px">
       <VStack align="flex-start" spacing="14px">
         <Image src={imageSrc} borderRadius="15px"/>
         <Heading padding="0 0 0 20px" size="md" >{title}</Heading>
         <Text padding="0 20px">{description}</Text>
-        <HStack padding="0 0 0 20px" spacing="14px">
+        <HStack id="project-link" padding="0 0 0 20px" spacing="14px">
           {site?
             <a
+            aria-label="On Click"
             target="_blank"
             href={site}>
               Visit Site <FontAwesomeIcon icon={faArrowRight} size="1x"/>
