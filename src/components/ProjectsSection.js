@@ -18,12 +18,19 @@ const projects = [
     getImageSrc: () => require("../images/little_lemon1.png"),
     site: "https://littlelemonbistro.vercel.app"
   },
+  // {
+  //   title: "The Sharpe Pages",
+  //   description:
+  //     'My first full-stack "CRUD-app" (2021)! Although it may need visual polishing, it is fully functional.',
+  //   getImageSrc: () => require("../images/sharpe_pages.png"),
+  //   site: "https://osharpe.pythonanywhere.com"
+  // },
   {
-    title: "The Sharpe Pages",
+    title: "Our Tip Calculator",
     description:
-      'My first full-stack "CRUD-app" (2021)! Although it may need visual polishing, it is fully functional.',
-    getImageSrc: () => require("../images/sharpe_pages.png"),
-    site: "https://osharpe.pythonanywhere.com"
+      "An intuitive tip calculator for any occasion.",
+    getImageSrc: () => require("../images/our_tip_calculator.png"),
+    site: "https://ourtipcalculator.netlify.app"
   },
   {
     title: "More to Come",
