@@ -33,6 +33,13 @@ const projects = [
     site: "https://ourtipcalculator.netlify.app"
   },
   {
+    title: "Pokemon Memory Match Game",
+    description:
+      `A tournament-style, card memory-match game that's fun for all ages!`,
+    getImageSrc: () => require("../images/poke_memory_match.png"),
+    site: "https://osharpe001.github.io"
+  },
+  {
     title: "More to Come",
     description:
       "Just like a city's skyline, there's more projects on the horizon. . .",
