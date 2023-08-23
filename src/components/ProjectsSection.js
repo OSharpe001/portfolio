@@ -18,13 +18,13 @@ const projects = [
     getImageSrc: () => require("../images/little_lemon1.png"),
     site: "https://littlelemonbistro.vercel.app"
   },
-  {
-    title: "Our Tip Calculator",
-    description:
-      "An intuitive tip calculator for any occasion.",
-    getImageSrc: () => require("../images/our_tip_calculator.png"),
-    site: "https://ourtipcalculator.netlify.app"
-  },
+  // {
+  //   title: "Our Tip Calculator",
+  //   description:
+  //     "An intuitive tip calculator for any occasion.",
+  //   getImageSrc: () => require("../images/our_tip_calculator.png"),
+  //   site: "https://ourtipcalculator.netlify.app"
+  // },
   {
     title: "Pokemon Memory Match Game",
     description:
@@ -32,13 +32,13 @@ const projects = [
     getImageSrc: () => require("../images/poke_memory_match.png"),
     site: "https://osharpe001.github.io"
   },
-  {
-    title: "The Sharpe Pages",
-    description:
-      'My first full-stack "CRUD-app" (2021)! Although it may need visual polishing, it is fully functional.',
-    getImageSrc: () => require("../images/sharpe_pages.png"),
-    site: "https://osharpe.pythonanywhere.com"
-  },
+  // {
+  //   title: "The Sharpe Pages",
+  //   description:
+  //     'My first full-stack "CRUD-app" (2021)! Although it may need visual polishing, it is fully functional.',
+  //   getImageSrc: () => require("../images/sharpe_pages.png"),
+  //   site: "https://osharpe.pythonanywhere.com"
+  // },
   {
     title: "More to Come",
     description:
