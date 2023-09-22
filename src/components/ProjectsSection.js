@@ -5,6 +5,27 @@ import Card from "./Card";
 
 const projects = [
   {
+    title: "Anime Hunter",
+    description:
+      `Anime searches made easy! You can count on your friendly, neighborhood Anime Hunter's Guild for the best info for your quarry!`,
+    getImageSrc: () => require("../images/anime_hunter.png"),
+    site: "https://animehunterguild.netlify.app"
+  },
+  {
+    title: "Dev^2",
+    description:
+      "Dev Squared is a developer's greatest asset for development! Create new blogs and document your experience for the progeny!",
+    getImageSrc: () => require("../images/dev_squared.png"),
+    site: "https://devsquared.onrender.com"
+  },
+  {
+    title: "Pokemon Memory Match Game",
+    description:
+      `A tournament-style, card memory-match game that's fun for all ages!`,
+    getImageSrc: () => require("../images/poke_memory_match.png"),
+    site: "https://osharpe001.github.io"
+  },
+  {
     title: "Letter to Success",
     description:
       'My rendition of "Wheel of Fortune! A great way to wind-down after a busy day of coding. 😁 ',
@@ -25,13 +46,6 @@ const projects = [
   //   getImageSrc: () => require("../images/our_tip_calculator.png"),
   //   site: "https://ourtipcalculator.netlify.app"
   // },
-  {
-    title: "Pokemon Memory Match Game",
-    description:
-      `A tournament-style, card memory-match game that's fun for all ages!`,
-    getImageSrc: () => require("../images/poke_memory_match.png"),
-    site: "https://osharpe001.github.io"
-  },
   // {
   //   title: "The Sharpe Pages",
   //   description:

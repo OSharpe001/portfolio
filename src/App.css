@@ -5,7 +5,14 @@
 .my-profile {
     margin: 0 0 10px;
 }
-
+ form {
+    padding: 20px 30px;
+    border: 1px solid blue;
+    box-shadow: -2px 2px 15px black;
+ }
+ .ready {
+    box-shadow: -1px 1px 10px aliceblue;
+ }
 .form-button a {
     width: stretch;
 }

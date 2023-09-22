@@ -14,7 +14,7 @@ export default function Footer() {
           maxWidth="1024px"
           height={16}
         >
-          <p>O.Sharpe • © 2023</p>
+          <p>O.Sharpe • 2023</p>
         </Flex>
       </footer>
     </Box>

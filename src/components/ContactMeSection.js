@@ -123,7 +123,7 @@ export default function LandingSection() {
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
 
-              <Button className="form-button" colorScheme="purple" width="full" onClick={clearForm} disabled={disabled}>
+              <Button className={disabled? "form-button": "form-button ready"} colorScheme="purple" width="full" onClick={clearForm} disabled={disabled}>
                 {sendEmail({
                   name:formik.values.name,
                   email:formik.values.email,
