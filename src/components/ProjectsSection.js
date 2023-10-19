@@ -12,11 +12,11 @@ const projects = [
     site: "https://animehunterguild.netlify.app"
   },
   {
-    title: "Dev^2",
+    title: "Dev Squared",
     description:
       "Dev Squared is a developer's greatest asset for development! Create new blogs and document your experience for the progeny!",
     getImageSrc: () => require("../images/dev_squared.png"),
-    site: "https://devsquared.onrender.com"
+    site: "https://devsquared-9dbdb24d78db.herokuapp.com"
   },
   {
     title: "Pokemon Memory Match Game",
